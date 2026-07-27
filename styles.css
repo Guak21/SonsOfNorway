@@ -84,3 +84,17 @@ img.photo-sm {
 	max-width: 150px;
 	height: auto;
 }
+
+.cell-1 {
+	background: lightblue;
+}
+
+.cell-2 {
+	background: lavender;
+}
+
+.merge-45 {
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	background: lavender;
+}

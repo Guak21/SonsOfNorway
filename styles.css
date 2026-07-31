@@ -3,16 +3,46 @@ font-family: Arial, sans-serif; margin: 20px;
 padding: 20px;
 background-color: #f4f4f4;
 }
+
+.nav-wrap {
+	position: relative;
+}
 nav {
 background-color: #333;
 padding: 10px;
 }
+
 nav a {
 color: white; margin: 10px;
 text-decoration: none;
 }
 nav a:hover {
 outline: 2px solid orange;
+}
+
+.nav-toggle {
+	display: none;
+}
+
+.nav-links {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 28px;
+	padding-left: 110px;
+}
+
+.logo {
+position: absolute;
+left: 24px;
+top: -18px;
+z-index: 10;
+}
+
+.logo img {
+height: 80px;
+width: auto;
+display: block;
 }
 
 h1 {
@@ -41,6 +71,63 @@ display: block;
 	gap: 12px;
 }
 
+@media (max-width: 600px) {
+	h1 {
+		text-align: center;
+	}
+	.nav-wrap {
+		padding-bottom: 56px;
+	}
+	.logo {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr !important;
+		.merge-12, .merge-36, .merge-45, .cell, .cell-1, .cell-2, .prayer, .cell merge-12 {
+			grid-column: 1 !important;
+			grid-row: auto !important;
+		}
+	}
+	.nav-toggle {
+		display: inline-flex;
+		color: blue;
+		align-items: center;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 30px;
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+	}
+	.nav-toggle:hover {
+		color: orange;
+	}
+	.nav-links {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding: 12px;
+		flex-direction: column;
+		gap: 12px;
+		background: #333;
+	}
+	.nav-wrap.open .nav-links {
+		display: flex;
+	}
+	.nav-wrap.open .nav-toggle {
+		color: orange;
+	}
+	.nav-wrap:not(.open) .nav-toggle {
+		color: blue;
+	}
+	
+}
+
 .cell {
 	background: #f3f4f6;
 	border: 2px solid #6b7280;
@@ -49,15 +136,15 @@ display: block;
 	text-align: center;
 	font-weight: 600;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-	background: honeydew;
+	background-image: linear-gradient(to top, honeydew 0%, white 100%);
 }
 
 .prayer {
-	background: lavender;
+	background-image: linear-gradient(to top, lavender 0%, white 100%);
 }
 
 .merge-12 {
-	background: lightblue;
+	background-image: linear-gradient(to top, lightblue 0%, white 100%);
 	grid-column: 1 / span 2;
 	grid-row: 1;
 }
@@ -65,7 +152,7 @@ display: block;
 .merge-36 {
 	grid-column: 3;
 	grid-row: 1 / span 2;
-	background: lightpink;
+	background-image: linear-gradient(to top, lightpink 0%, white 100%);
 }
 
 span.highlight {
@@ -86,15 +173,15 @@ img.photo-sm {
 }
 
 .cell-1 {
-	background: lightblue;
+	background-image: linear-gradient(to top, lightblue 0%, white 100%);
 }
 
 .cell-2 {
-	background: lavender;
+	background-image: linear-gradient(to top, lavender 0%, white 100%);
 }
 
 .merge-45 {
 	grid-column: 1 / span 2;
 	grid-row: 2;
-	background: lavender;
+	background-image: linear-gradient(to top, lavender 0%, white 100%);
 }

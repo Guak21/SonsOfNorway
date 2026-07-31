@@ -9,12 +9,17 @@
 
 <title>Home</title>
 <link rel="stylesheet" href="styles.css">
-
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
 
-<nav>
+<header class="nav-wrap">
+	<button class="nav-toggle" aria-controls="nav-links" aria-expanded="false">&#9776</button>
+<div class="logo">
+<img src="assets/sofn_emblem.png" alt="Logo">
+</div>
+<nav class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="assets/Kalender 2026.pdf">Kalender</a>
@@ -22,12 +27,13 @@
 <a href="contact.html">Contact</a>
 
 </nav>
+</header>
 <h1>Welcome to the Snowshoe Thompson Website</h1>
 
 <div class="grid">
 	<div class="cell merge-12"><b>Announcements</b><br>Announcements! Announcements! Announcements! Make the speech nice and short...nice and short...nice and short...because we don't like 'em!</div>
 	
-	<div class="cell"><b>Norwegian Word of the Day</b><p><span class="highlight">trilleb&aring;r</span></p><p>wheelbarrow</p></div>
+	<div class="cell"><b>Norwegian Word of the Day</b><p><span class="highlight" id="wotd-norwegian"></span></p><p id="wotd-english"></p></div>
 	<div class="cell prayer"><b>Norwegian Prayer</b><p>I Jesu navn g&aring;r vi til bords, og spiser, drikker p&aring; ditt ord. Deg, Gud til &aelig;re, oss til gavn, s&aring; f&aring;r vi mat i Jesu navn. Amen.</div>
 
 	<div class="cell merge-36"><b>Recipe of the Month</b><p><span class="highlight">Krum Kake</span></p>
@@ -44,7 +50,7 @@
 	
 </div>
 
-
+<script src="script.js" defer></script>
 </body>
 
 </html>

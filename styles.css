@@ -6,9 +6,10 @@ background-color: #f4f4f4;
 
 .nav-wrap {
 	position: relative;
+	padding: 10px;
 }
 nav {
-background-color: #333;
+background-color: #4b4f54;
 padding: 10px;
 }
 
@@ -17,7 +18,7 @@ color: white; margin: 10px;
 text-decoration: none;
 }
 nav a:hover {
-outline: 2px solid orange;
+outline: 2px solid #f9423a;
 }
 
 .nav-toggle {
@@ -29,12 +30,12 @@ outline: 2px solid orange;
 	padding: 0;
 	display: flex;
 	gap: 28px;
-	padding-left: 110px;
+	padding-left: 280px;
 }
 
 .logo {
 position: absolute;
-left: 24px;
+left: 10px;
 top: -18px;
 z-index: 10;
 }
@@ -46,6 +47,7 @@ display: block;
 }
 
 h1 {
+font-variant: small-caps;
 color: #7A0000;
 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -92,7 +94,7 @@ display: block;
 	}
 	.nav-toggle {
 		display: inline-flex;
-		color: blue;
+		color: #0085ad;
 		align-items: center;
 		position: absolute;
 		top: 10px;
@@ -103,7 +105,7 @@ display: block;
 		cursor: pointer;
 	}
 	.nav-toggle:hover {
-		color: orange;
+		color: #f9423a;
 	}
 	.nav-links {
 		display: none;
@@ -120,10 +122,13 @@ display: block;
 		display: flex;
 	}
 	.nav-wrap.open .nav-toggle {
-		color: orange;
+		color: #f9423a;
 	}
 	.nav-wrap:not(.open) .nav-toggle {
-		color: blue;
+		color: #0085ad;
+	}
+	.contact {
+		margin: 0 auto;
 	}
 	
 }
@@ -136,15 +141,15 @@ display: block;
 	text-align: center;
 	font-weight: 600;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-	background-image: linear-gradient(to top, honeydew 0%, white 100%);
+	background-image: linear-gradient(to top, #88dbdf 0%, white 100%);
 }
 
 .prayer {
-	background-image: linear-gradient(to top, lavender 0%, white 100%);
+	background-image: linear-gradient(to top, #a89968 0%, white 100%);
 }
 
 .merge-12 {
-	background-image: linear-gradient(to top, lightblue 0%, white 100%);
+	background-image: linear-gradient(to top, #0085ad 0%, white 100%);
 	grid-column: 1 / span 2;
 	grid-row: 1;
 }
@@ -152,11 +157,11 @@ display: block;
 .merge-36 {
 	grid-column: 3;
 	grid-row: 1 / span 2;
-	background-image: linear-gradient(to top, lightpink 0%, white 100%);
+	background-image: linear-gradient(to top, #f9423a 0%, rgba(249,66,58,0.15) 40%, white 100%);
 }
 
 span.highlight {
-	background: coral;
+	background: #f9423a;
 }
 
 ul.no-bullets {
@@ -172,16 +177,72 @@ img.photo-sm {
 	height: auto;
 }
 
+img.photo-lg {
+	max-width: 300px;
+	height: auto;
+}
+
 .cell-1 {
-	background-image: linear-gradient(to top, lightblue 0%, white 100%);
+	background-image: linear-gradient(to top, #0085ad 0%, white 100%);
 }
 
 .cell-2 {
-	background-image: linear-gradient(to top, lavender 0%, white 100%);
+	background-image: linear-gradient(to top, #002855 0%, white 100%);
 }
 
 .merge-45 {
 	grid-column: 1 / span 2;
 	grid-row: 2;
-	background-image: linear-gradient(to top, lavender 0%, white 100%);
+	background-image: linear-gradient(to top, #a89968 0%, white 100%);
+}
+
+#wotd-norwegian-link {
+	text-decoration: none;
+	color: black;
+	background-color: #f9423a;
+}
+
+#wotd-norwegian-link:hover {
+	text-decoration: none;
+	color: #f9423a;
+	background-color: #a89968;
+	font-size: large;
+}
+
+#wotd-english-link {
+	text-decoration: none;
+	color: black;
+}
+
+#wotd-english-link:hover {
+	text-decoration: none;
+	color: #f9423a;
+	font-size: large;
+}
+
+.inner-cell {
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	background-color: white !important;
+	background-size: cover;
+	background-image: none;
+}
+
+.merge-row3 {
+	background-image: linear-gradient(to top, #0085ad 0%, white 100%);
+	grid-column: 1/ span 3;
+	grid-row: 3;
+}
+
+a.terms:hover {
+	color: #a89968;
+}
+
+img.photo-fit {
+	max-width: 360px;
+	height: auto;
+}
+
+h2 {
+	font-variant: small-caps;
 }

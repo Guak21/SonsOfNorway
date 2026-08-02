@@ -17,6 +17,16 @@ async function loadWotd() {
   const word = words[idx];
   document.getElementById("wotd-norwegian").textContent = word.norwegian;
   document.getElementById("wotd-english").textContent = word.english;
+
+  const a_Norwegian = document.getElementById("wotd-norwegian-link");
+  a_Norwegian.textContent = word.norwegian;
+  url = "https://translate.google.com/?sl=no&tl=en&text=" + word.norwegian + "%0A&op=translate";
+  a_Norwegian.href = url;
+
+  const a_English = document.getElementById("wotd-english-link");
+  a_English.textContent = word.english;
+  url = "https://translate.google.com/?sl=en&tl=no&text=" + word.english + "%0A&op=translate";
+  a_English.href = url;
 }
 
 loadWotd().catch(console.error);

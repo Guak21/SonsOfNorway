@@ -73,7 +73,7 @@ display: block;
 	gap: 12px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
 	h1 {
 		text-align: center;
 	}
@@ -165,11 +165,16 @@ span.highlight {
 }
 
 ul.no-bullets {
+	width: fit-content;
 	list-style: none;
 	padding: 0;
-	margin: 50px;
+	margin: 0 auto;
+	text-align: left;	
+}
+
+li{
+	width: fit-content;
 	text-align: left;
-	
 }
 
 img.photo-sm {
